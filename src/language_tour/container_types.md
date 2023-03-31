@@ -2,18 +2,18 @@
 
 Opshin has two main container types:
 
-- `list[a]`
+- `List[a]`
 - `Dict[k, v]`
 
 >**Note:** The container types are generic, and the letter in square brackets (`[]`) are the type arguments
 
-## `list[a]`
+## `List[a]`
 
-The Opshin `list` type is a container type that is used to hold multiple values of the same type.
+The Opshin `List` type is a container type that is used to hold multiple values of the same type.
 This is works just like the `list` type in Python.
 
 ```python
-listy: list[int] = [1, 1, 2, 3, 5]
+listy: List[int] = [1, 1, 2, 3, 5]
 ```
 
 >**Note:** Opshin lists are actually *linked-lists*.
@@ -21,13 +21,13 @@ listy: list[int] = [1, 1, 2, 3, 5]
 
 ### Useful Methods
 
-#### `.len()`
+#### `len(x)`
 
-The `.len()` method returns the length of the list as an `int`:
+The `len` method returns the length of the list as an `int`:
 
 ```python
-lenny: int = listy.len() 
-lenny == 5  # true
+lenny: int = len(listy) 
+lenny == 5  # True
 ```
 
 ## `Dict[k, v]`
@@ -47,7 +47,7 @@ scores: Dict[str, int] = {"god_binder": 12, "radio_knight": 42}
 The `.keys()` method returns a list of the keys in a dictionary,
 
 ```python
-players: list[str] = scores.keys() # ["god_binder", "radio_knight"]
+players: List[str] = scores.keys() # ["god_binder", "radio_knight"]
 ```
 
 #### `.values()`
@@ -55,10 +55,12 @@ players: list[str] = scores.keys() # ["god_binder", "radio_knight"]
 The `.values()` method
 
 ```python
-raw_scores: list[str] = scores.values() # [12, 42]
+raw_scores: List[str] = scores.values() # [12, 42]
 ```
 
 #### `.items()`
+
+> Note: this is not yet implemented
 
 the `.items()` method returns a tuple of the each key-value pair in the dictionary.
 
