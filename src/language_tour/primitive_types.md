@@ -40,9 +40,11 @@ my_bytes: bytes = b"ooh a bytestring"
 ```
 
 This type is usually used to represent hashes or CBOR.
+Note that bytestrings per default generate the bytestring for the ASCII character input.
+If you have a bytestring `0xaf2e221a` represented in hexadecimal format, you can write it like this as a literal in opshin.
 
 ```python
-hashy: bytes = b"af2e221a"
+hashy: bytes = b"\xaf\x2e\x22\x1a"
 ```
 
 ## `string`
