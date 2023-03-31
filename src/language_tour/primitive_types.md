@@ -7,7 +7,7 @@ Opshin has 4 primitive types
 - `int`
 - `bool`
 - `bytes`
-- `string`
+- `str`
 
 ## `int`
 
@@ -36,7 +36,7 @@ The `bytes` type in Opshin represents an array/string of bytes.
 It's usually called `ByteArray` in other Cardano smart contract languages.
 
 ```python
-my_bytes: bytes = b"ooh a bytestring"
+my_bytes = b"ooh a bytestring"
 ```
 
 This type is usually used to represent hashes or CBOR.
@@ -44,15 +44,15 @@ Note that bytestrings per default generate the bytestring for the ASCII characte
 If you have a bytestring `0xaf2e221a` represented in hexadecimal format, you can write it like this as a literal in opshin.
 
 ```python
-hashy: bytes = b"\xaf\x2e\x22\x1a"
+hashy = b"\xaf\x2e\x22\x1a"
 ```
 
-## `string`
+## `str`
 
-The `string` type in Opshin is just like normal strings in Python.
+The `str` type in Opshin is just like normal strings in Python.
 
 ```python
-stringy: str = "hello world"
+stringy = "hello world"
 
 not_so_secret_message = "..."
 ```
