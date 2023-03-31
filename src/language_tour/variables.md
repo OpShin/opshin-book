@@ -23,7 +23,7 @@ x = 5
 
 ## Tuple Assignments
 
-Opsin supports Python's tuple assignment syntax:
+Opshin supports Python's tuple assignment syntax:
 
 ```python
 a, b = 3, 7
