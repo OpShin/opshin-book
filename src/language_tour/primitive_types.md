@@ -24,10 +24,10 @@ my_octal   = 0o121; ...
 
 ## `bool`
 
-The `bool` type has two possible values: `true` or `false`.
+The `bool` type has two possible values: `True` or `False`.
 
 ```python
-booly = false
+booly = False
 ```
 
 ## `bytes`
