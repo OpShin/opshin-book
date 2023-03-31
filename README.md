@@ -25,6 +25,7 @@ To run this project, you'll need:
 
 - [x] Write Primitive types section.
 - [x] Write Container types section.
+- [ ] Write PlutusData types secton
 - [ ] Write on example validators.
 - [ ] Write on Parameterized Scripts.
 - [ ] Show how to make a small Dapp from scratch, cover:
