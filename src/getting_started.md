@@ -8,7 +8,7 @@ This guide tries to assume as little knowledge as possible but there are certain
 
 ## Installation
 
-Install Python `3.8`, `3.9` or `3.10` or `3.10`.
+Install Python `3.8`, `3.9`, `3.10` or `3.11`.
 Then run:
 
 ```sh
