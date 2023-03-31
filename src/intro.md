@@ -6,7 +6,7 @@
 
 > Disclaimer: This book is still WIP, so expect incomplete or missing information.
 
-Opshin is a pythonic language for writing smart contracts on the [Cardano](https://cardano.org/) blockchain.
+[Opshin](https://opshin.opshin.dev/opshin/) is a pythonic language for writing smart contracts on the [Cardano](https://cardano.org/) blockchain.
 The goal of Opshin is to reduce the barrier of entry in Smart Contract development on Cardano.
 Opshin is a strict subset of [Python](https://python.org/), this is means anyone who knows Python can get up to speed on Opshin pretty quickly.
 
