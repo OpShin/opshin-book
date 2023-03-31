@@ -6,11 +6,11 @@ Variables in Opshin are declared just like you'd expect them to in Python:
 # A simple variable declaration
 x: int = 5 
 
-# Variables in Opsin can be mutated.
+# Variables in Opshin can be mutated.
 x += 1
 ```
 
->**Note:** `int` is the only number type available in Opsin.
+>**Note:** For now `int` is the only number type available in Opshin. `fractions` are coming soon.
 
 ## Type Annotations
 
