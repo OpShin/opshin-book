@@ -11,5 +11,8 @@
   - [Conditional Statements](./language_tour/conditional_statements.md)
   - [Loop Statements](./language_tour/loop_statements.md)
   - [Functions](./language_tour/functions.md)
+
+- [Smart Contract Tour](./smart_contract_tour/index.md)
   - [Validator Scripts](./language_tour/validator_scripts.md)
   - [The ScriptContext](./language_tour/the_scriptcontext.md)
+  - [Handling Time]

@@ -8,6 +8,7 @@ Opshin has 4 primitive types
 - `bool`
 - `bytes`
 - `str`
+- `None`
 
 ## `int`
 
@@ -55,4 +56,13 @@ The `str` type in Opshin is just like normal strings in Python.
 stringy = "hello world"
 
 not_so_secret_message = "..."
+```
+
+## `None`
+
+The `None` type is exactly like the `None` type in Python.
+In other cardano smart contract languages it's called **unit** and denoted by empty brackets, `()`.
+
+```python
+null_val = None
 ```

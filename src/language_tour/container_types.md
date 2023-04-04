@@ -19,6 +19,15 @@ listy: List[int] = [1, 1, 2, 3, 5]
 >**Note:** Opshin lists are actually *linked-lists*.
 > This is because that's how lists are implemented in UPLC.
 
+### List Comprehension
+
+Opshin supports Python's list comprehension syntax.
+This allows for very compact list initialization:
+
+```python
+squares = [x**2 for x in range(100)]
+```
+
 ### Useful Methods
 
 #### `len(x)`
