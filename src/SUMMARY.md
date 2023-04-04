@@ -13,6 +13,6 @@
   - [Functions](./language_tour/functions.md)
 
 - [Smart Contract Tour](./smart_contract_tour/index.md)
-  - [Validator Scripts](./language_tour/validator_scripts.md)
-  - [The ScriptContext](./language_tour/the_scriptcontext.md)
+  - [Validator Scripts](./smart_contract_tour/validator_scripts.md)
+  - [The ScriptContext](./smart_contract_tour/the_scriptcontext.md)
   - [Handling Time](./smart_contract_tour/handling_time.md)
