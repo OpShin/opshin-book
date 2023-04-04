@@ -1,6 +1,6 @@
 # Conditional Statements
 
-Opsin uses `if/else` statements for conditional control flow, like in Python:
+Opshin uses `if`, `elif` and `else` statements for conditional control flow, like in Python:
 
 ## `if` statements
 
@@ -8,6 +8,8 @@ Opsin uses `if/else` statements for conditional control flow, like in Python:
 n = 4
 if n < 5:
     print("Less than 5.")
-elif n > 5:
+elif n == 5:
+    print("Equal to 5.")
+else:
     print("Greater than 5.")
 ```

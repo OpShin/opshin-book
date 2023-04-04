@@ -7,6 +7,8 @@ from opshin.prelude import *
 
 @dataclass()
 class Person(PlutusData):
-    # Name
+    # Every person has a UTF8 encoded name
     name: bytes
+    # Every person has a year of birth
+    birthyear: int
 ```
