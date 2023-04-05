@@ -37,12 +37,6 @@ A `POSIXTimeRange` can be visualized like a subsection of a numberline starting 
 
 Helper functions for the `POSIXTimeRange` type are stored in [`opshin.ledger.interval`](https://opshin.opshin.dev/opshin/ledger/interval.html#opshin.ledger.interval).
 
->**Note:** `TrueData` and `FalseData` are datums that's used for encoding `True` and `False` in the `ScriptContext`.
->
-> ```python
-> true_value = TrueData()
-> false_value = FalseData()
->```
 
 #### `make_range(lower_bound: int, upper_bound: int) -> POSIXTimeRange`
 
