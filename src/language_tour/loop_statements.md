@@ -42,7 +42,7 @@ for name, score in scores.items():
 for name in scores.keys():
     ...
 
-# Iterating over the eys and values using '.values()'
+# Iterating over the values using '.values()'
 for score in scores.values():
     ...
 ```

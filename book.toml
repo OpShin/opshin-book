@@ -11,5 +11,5 @@ git-repository-icon = "fa-github"
 site-url = "/"
 
 [output.html.fold]
-enable = true
+enable = false
 level = 0

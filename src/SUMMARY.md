@@ -7,6 +7,7 @@
 - [Language Tour](./language_tour/index.md)
   - [Primitive Types](./language_tour/primitive_types.md)
   - [Container Types](./language_tour/container_types.md)
+  - [Classes](./language_tour/classes.md)
   - [Variables](./language_tour/variables.md)
   - [Conditional Statements](./language_tour/conditional_statements.md)
   - [Loop Statements](./language_tour/loop_statements.md)

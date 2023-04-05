@@ -69,11 +69,10 @@ raw_scores: List[str] = scores.values() # [12, 42]
 
 #### `.items()`
 
-> Note: this is not yet implemented
 
 the `.items()` method returns a tuple of the each key-value pair in the dictionary.
 
 ```python
 for (username, score) in scores.values():
-    print(username, "scored:", score)
+    print(username + "scored:" + str(score))
 ```
