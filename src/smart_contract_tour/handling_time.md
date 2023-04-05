@@ -49,7 +49,7 @@ Helper functions for the `POSIXTimeRange` type are stored in [`opshin.ledger.int
 This takes a the lower bound as the first argument and the upper bound as the second argument makes a `POSIXTimeRange` that starts from `lower_bound` and ends at `upper_bound`.
 
 ```python
-valid_range = make_range(2, 10)
+valid_range = make_range(-3, 2)
 ```
 
 This can be visualized as:
@@ -66,7 +66,7 @@ This can be visualized as:
 This takes a the lower bound as the first argument and makes a `POSIXTimeRange` that starts from `lower_bound` and ends at positive infinity.
 
 ```python
-valid_range = make_from(12)
+valid_range = make_from(-1)
 ```
 
 This can be visualized as:
@@ -83,7 +83,7 @@ This can be visualized as:
 This takes a the upper bound as the first argument and makes a `POSIXTimeRange` that starts from negative infinity and ends at `upper_bound`.
 
 ```python
-valid_range = make_to(12)
+valid_range = make_to(1)
 ```
 
 This can be visualized as:
