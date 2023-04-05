@@ -25,7 +25,7 @@ class POSIXTimeRange(PlutusData):
     upper_bound: UpperBoundPOSIXTime
 ```
 
-A `POSIXTimeRange` can be visualized like a subsection of a numberline starting from positive infinity(`-∞`) to negative infinity (`+∞`)
+A `POSIXTimeRange` can be visualized like a subsection of a numberline starting from negative infinity(`-∞`) to positive infinity (`+∞`)
 
 ```sh
     ⬤----------------------→⬤
