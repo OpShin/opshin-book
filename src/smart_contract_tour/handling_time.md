@@ -28,8 +28,8 @@ class POSIXTimeRange(PlutusData):
 A `POSIXTimeRange` can be visualized like a subsection of a numberline starting from negative infinity(`-∞`) to positive infinity (`+∞`)
 
 ```sh
-    ⬤----------------------→⬤
--∞  |    -3 -2  -1   0   1   2   3       +∞
+         ⬤-------------→⬤
+-∞       -3 -2  -1   0   1   2   3       +∞
  └┴┴┴┴┴─┴─┴──┴───┴───┴───┴───┴───┴─┴─┴┴┴┴┘ 
 ```
 
@@ -57,7 +57,7 @@ This can be visualized as:
 ```sh
      lower_bound        upper_bound
           ⬤----------------→⬤
--∞  |    -3 -2  -1   0   1   2   3       +∞
+-∞       -3 -2  -1   0   1   2   3       +∞
  └┴┴┴┴┴─┴─┴──┴───┴───┴───┴───┴───┴─┴─┴┴┴┴┘ 
 ```
 
@@ -74,7 +74,7 @@ This can be visualized as:
 ```sh
             lower_bound     
                  ⬤---------------------→⬤
--∞  |    -3 -2  -1   0   1   2   3       +∞
+-∞       -3 -2  -1   0   1   2   3       +∞
  └┴┴┴┴┴─┴─┴──┴───┴───┴───┴───┴───┴─┴─┴┴┴┴┘ 
 ```
 
@@ -91,7 +91,7 @@ This can be visualized as:
 ```sh
                     upper_bound 
  ⬤---------------------→⬤
--∞  |    -3 -2  -1   0   1   2   3       +∞
+-∞       -3 -2  -1   0   1   2   3       +∞
  └┴┴┴┴┴─┴─┴──┴───┴───┴───┴───┴───┴─┴─┴┴┴┴┘ 
 ```
 
