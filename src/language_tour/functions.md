@@ -20,7 +20,7 @@ def fibonacci(n: int) -> int:
 
 As shown, Opshin functions support recursion. 
 
-## Lambda Functions
+## Lambda and Local Functions
 
 Generally OpShin discourages the use of lambda functions, as they don't allow specifying types in the function signature.
 Instead, consider using a local function definitions or list expressions. For example instead of the following expression
@@ -45,4 +45,16 @@ Or you can express this very compactly and readable directly in a list expressio
 
 ```python
 ys = [2*x for x in xs if x > 0]
+```
+
+Note that you can define functions locally and within other functions, so that they do not clutter your namespace and can not be used in the wrong context.
+The following is legal.
+
+```python
+def mul_twice(x: int) -> int:
+
+   def mul_once(x: int) -> int:
+        return x * x
+
+   return mul_once(x) * mul_once(x)
 ```
