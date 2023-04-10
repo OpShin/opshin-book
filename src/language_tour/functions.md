@@ -22,5 +22,27 @@ As shown, Opshin functions support recursion.
 
 ## Lambda Functions
 
-> Opshin currently doesn't support `lambda` functions but they're a work in progress.
-> We'll update this section as soon as they're working.
+Generally OpShin discourages the use of lambda functions, as they don't allow specifying types in the function signature.
+Instead, consider using a local function definitions or list expressions. For example instead of the following expression
+
+```python
+ys = map(lambda x: 2*x, filter(lambda x: x > 0, xs))
+```
+
+You could either define local functions like this
+
+```python
+def greater_zero(x: int) -> bool:
+  return x > 0
+
+def mul_2(x: int) -> int:
+  return 2*x
+
+ys = map(mul_2, filter(greater_zero, xs))
+```
+
+Or you can express this very compactly and readable directly in a list expression like this
+
+```python
+ys = [2*x for x in xs if x > 0]
+```
