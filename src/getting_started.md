@@ -26,11 +26,10 @@ python3 -m pip install opshin
         print("Hello world!")
     ```
 
-2. Run the :
+2. Run this command:
 
     ```sh
-    $ opshin compile hello_world.py
-      ...
+    $ opshin build hello_world.py
     ```
 
     This should create a `build` folder in the current directory.
