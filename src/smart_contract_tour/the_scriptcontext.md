@@ -7,6 +7,11 @@ It contains a lot of useful information such as:
 - What will the inputs of the transactions be?
 - What will the outputs of the transaction?
 
+All of these things are contained in the ScriptContext object passed into the contract as the last argument.
+This section covers the most interesting parts of the Script Context - if you want to learn more check out the full documentation at the module description:
+
+https://opshin.opshin.dev/opshin/ledger/api_v2.html
+
 ## `ScriptContext`
 
 The `ScriptContext` is defined as:
