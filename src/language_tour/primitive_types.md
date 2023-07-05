@@ -2,7 +2,7 @@
 
 <!-- >**Note:** This is covers -->
 
-Opshin has 4 primitive types
+Opshin has 5 primitive types
 
 - `int`
 - `bool`
@@ -14,18 +14,20 @@ Opshin has 4 primitive types
 
 This is the only numeric type in Opshin.
 Opshin's `int` type works just the `int` type in Python.
+It represents integer numbers.
 
 ```python
 # Opshin supports typical integer literals:
-my_decimal = 17;
-my_binary  = 0b10001;
-my_hex     = 0x11;
-my_octal   = 0o121; ...
+my_decimal = 17  # decimal notation
+my_binary  = 0b10001  # binary notation
+my_hex     = 0x11  # hexadecimal notation
+my_octal   = 0o121 # octal notation
 ```
 
 ## `bool`
 
 The `bool` type has two possible values: `True` or `False`.
+Control flow (if/else, while) are usually controlled using boolean types.
 
 ```python
 booly = False

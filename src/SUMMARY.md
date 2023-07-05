@@ -5,6 +5,7 @@
 [Understanding EUTXO](./eutxo_crash_course.md)
 
 - [Language Tour](./language_tour/index.md)
+  - [Structure](./language_tour/structure.md)
   - [Primitive Types](./language_tour/primitive_types.md)
   - [Container Types](./language_tour/container_types.md)
   - [Classes](./language_tour/classes.md)

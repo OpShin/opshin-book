@@ -10,7 +10,7 @@ We encourage you to always try to write code the way
 you would do it in a normal Python program.
 Play around to see what is accepted by the compiler and what not.
 If the compiler accepts your code, the code
-should be safe to run (the only notable exception are type downcasts).
+is safe to run (the only notable exception are type downcasts, covered later).
 
 The main goal of OpShin is that you can express
 the smart contract logic the way you want -
