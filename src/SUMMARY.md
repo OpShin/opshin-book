@@ -13,6 +13,7 @@
   - [Conditional Statements](./language_tour/conditional_statements.md)
   - [Loop Statements](./language_tour/loop_statements.md)
   - [Functions](./language_tour/functions.md)
+  - [Builtins](./language_tour/builtins.md)
 
 - [Smart Contract Tour](./smart_contract_tour/index.md)
   - [Validator Scripts](./smart_contract_tour/validator_scripts.md)

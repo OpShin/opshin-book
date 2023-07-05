@@ -61,14 +61,6 @@ The function `encode` transforms a normal, readable string into its binary repre
 "OpShin".encode()  # returns b"\x4f\x70\x53\x68\x69\x6e"
 ```
 
-#### `len()`
-
-If you want to know the length of a string, call `len()` on it.
-
-```python
-len("OpShin")  # returns 6
-```
-
 #### `str()`
 
 If you want to convert anything into a string for debugging purposes, you may call the function `str` on it.
