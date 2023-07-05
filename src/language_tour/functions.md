@@ -1,13 +1,12 @@
 # Functions
 
-Functions in Opshin are just like in Python:
-
 ## Regular Functions
 
 Functions in Opshin should have type annotations for the arguments and the return.
 There must be one `return` statement at the end of a function.
 If it is omitted, the function returns `None`.
-Note it is not possible to return from anywhere else but the end of the function.
+
+> Note that the `return` statement must be the last statement in a function, if present
 
 ```python
 def fibonacci(n: int) -> int:
