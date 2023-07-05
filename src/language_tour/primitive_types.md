@@ -12,7 +12,7 @@ and not composed of others.
 - `str`
 - `None`
 
-### `int`
+## `int`
 
 This is the only numeric type in Opshin.
 It represents integer numbers.
@@ -30,7 +30,7 @@ my_octal   = 0o121 # octal notation
 print(my_decimal == my_hex)
 ```
 
-### `bool`
+## `bool`
 
 The `bool` type has two possible values: `True` or `False`.
 Control flow (if/else, while) are usually controlled using boolean types.
@@ -40,7 +40,7 @@ booly = False
 ```
 
 
-### `str`
+## `str`
 
 The `str` type in Opshin stores Strings, i.e. human-readable text.
 It is mostly used for printing debug messages.
@@ -51,17 +51,25 @@ stringy = "hello world"
 not_so_secret_message = "..."
 ```
 
-#### encode
+#### `.encode()`
 
 `str` are usually stored in binary format in the so-called UTF-8 encoding.
 This is for example the case for native token names.
 The function `encode` transforms a normal, readable string into its binary representation.
 
 ```python
-b"OpShin".encode()  # returns b"\x4f\x70\x53\x68\x69\x6e"
+"OpShin".encode()  # returns b"\x4f\x70\x53\x68\x69\x6e"
 ```
 
-### `bytes`
+#### `len()`
+
+If you want to know the length of a string, call `len()` on it.
+
+```python
+len("OpShin")  # returns 6
+```
+
+## `bytes`
 
 The `bytes` type in Opshin represents an array/string of bytes.
 It's usually called `ByteArray` or `ByteString` in other programming languages.
@@ -85,17 +93,17 @@ You may also use the helper function `bytes.fromhex`.
 hashy = bytes.fromhex("af2e221a")
 ```
 
-#### decode
+#### `.decode()`
 
 `bytes` may represent unicode UTF-8 encoded strings.
 This is for example the case for native token names.
 The function `decode` transforms a byte string into a normal, readable string.
 
 ```python
-b"\x4f\x70\x53\x68\x69\x6e".encode()  # returns "OpShin"
+b"\x4f\x70\x53\x68\x69\x6e".decode()  # returns "OpShin"
 ```
 
-#### hex
+#### `.hex()`
 
 `bytes` are better readable when displayed in hexadecimal notation.
 Use `hex` for this.
@@ -104,10 +112,19 @@ Use `hex` for this.
 b"\x4f\x70\x53\x68\x69\x6e".hex()  # returns "4f705368696e"
 ```
 
-### `None`
+#### `len()`
+
+If you want to know the length of a bytestring, call `len()` on it.
+
+```python
+len(b"OpShin")  # returns 6
+```
+
+## `None`
 
 The `None` type is exactly like the `None` type in Python.
 In other cardano smart contract languages it's called **unit** and denoted by empty brackets, `()`.
+It doesn't do anything and is usually used to denote the absence of a value.
 
 ```python
 null_val = None

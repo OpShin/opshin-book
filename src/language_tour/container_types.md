@@ -28,8 +28,6 @@ This allows for very compact list initialization:
 squares = [x**2 for x in range(100)]
 ```
 
-### Useful Methods
-
 #### `len(x)`
 
 The `len` method returns the length of the list as an `int`:
@@ -49,7 +47,6 @@ It works just like the `dict` type in Python.
 scores: Dict[str, int] = {"god_binder": 12, "radio_knight": 42}
 ```
 
-### Useful Methods
 
 #### `.keys()`
 
