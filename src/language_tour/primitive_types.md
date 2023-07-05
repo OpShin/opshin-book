@@ -69,6 +69,32 @@ If you want to know the length of a string, call `len()` on it.
 len("OpShin")  # returns 6
 ```
 
+#### `str()`
+
+If you want to convert anything into a string for debugging purposes, you may call the function `str` on it.
+
+```python
+str(42)  # returns "42"
+```
+
+Note that `print` also implicitly calls `str` on its input before printing it for your convenience.
+
+```python
+print(42)  # prints "42"
+```
+
+#### Format strings
+
+More conveniently, if you want to combine strings and other values to a nicely formatted output,
+use formatting strings like this:
+
+```python
+print(f"the value of a is {a}, but the value of b is {b}")
+```
+
+This will print the original string and substitute everything between `{` and `}`
+with the evaluated expression.
+
 ## `bytes`
 
 The `bytes` type in Opshin represents an array/string of bytes.

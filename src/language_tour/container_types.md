@@ -19,6 +19,20 @@ listy: List[int] = [1, 1, 2, 3, 5]
 >**Note:** Opshin lists are actually *linked-lists*.
 > This is because that's how lists are implemented in UPLC.
 
+### List Access
+
+You may access elements at arbitrary positions within a list like this:
+
+```python
+listy[3]  # will return the element at the 4th position (3rd with 0-based indexing), i.e. 3
+```
+
+If you want to count from the back, use negative numbers:
+
+```python
+listy[-2]  # returns the second-to-last element, i.e. 3
+```
+
 ### List Comprehension
 
 Opshin supports Python's list comprehension syntax.
@@ -28,7 +42,7 @@ This allows for very compact list initialization:
 squares = [x**2 for x in range(100)]
 ```
 
-#### `len(x)`
+#### `len()`
 
 The `len` method returns the length of the list as an `int`:
 
