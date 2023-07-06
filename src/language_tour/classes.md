@@ -23,6 +23,14 @@ You can construct an object by calling the classname with the variables in order
 a = Person(b"Billy", 1970)
 ```
 
+#### Attribute access
+
+All named attributes defined in the class body are accessible
+by `object.attribute`. For example, to access the name of a person we would run
+
+```python
+print(a.name)  # prints b"Billy"
+```
 
 #### Union types
 
