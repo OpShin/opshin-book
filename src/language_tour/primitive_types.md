@@ -94,11 +94,14 @@ not_so_secret_message = "..."
 
 #### Operation on Strings
 
-OpShin offers addition operations for strings.
+OpShin offers some builtin operations for strings.
 
 ```python
 # Concatentation
 s = "hello " + "world!"  # Returns "hello world!"
+
+# Cast to integer
+s = int("42")  # returns 42
 ```
 
 #### `.encode()`
