@@ -49,6 +49,8 @@ class Animal(PlutusData):
     CONSTR_ID = 2
     # Animals have a name too!
     name: bytes
+    # They also have an owner, which is another dataclass
+    owner: Person
 
 
 # Note all of these classes have distinct CONSTR_ID values
@@ -57,8 +59,8 @@ CityDweller = Union[Animal, Plant, Person]
 
 # Both assignments are fine, because a is annotated
 # to be of the Union type and can be of either class
-a: CityDweller = Plant()
-a = Animal(b"jackie")
+c: CityDweller = Plant()
+c = Animal(b"jackie", a)
 ```
 
 
