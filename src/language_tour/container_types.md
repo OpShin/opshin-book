@@ -75,15 +75,16 @@ players: List[str] = scores.keys() # ["god_binder", "radio_knight"]
 The `.values()` method
 
 ```python
-raw_scores: List[str] = scores.values() # [12, 42]
+raw_scores: List[int] = scores.values() # [12, 42]
 ```
 
 #### `.items()`
 
 
-the `.items()` method returns a tuple of the each key-value pair in the dictionary.
+The `.items()` method returns a tuple of the each key-value pair in the dictionary.
+This is particularly useful if you want to iterate over all pairs contained in a dictionary.
 
 ```python
-for (username, score) in scores.values():
+for username, score in scores.values():
     print(username + "scored:" + str(score))
 ```
