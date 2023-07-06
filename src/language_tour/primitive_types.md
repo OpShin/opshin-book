@@ -30,6 +30,30 @@ my_octal   = 0o121 # octal notation
 print(my_decimal == my_hex)
 ```
 
+#### Operation on integers
+
+OpShin offers a number of builtin operations for integers.
+
+```
+# Addition
+a = 5 + 2  # returns 7
+
+# Subtraction
+a = 5 - 2  # returns 3
+
+# Multiplication
+a = 5 * 2  # returns 10
+
+# Integer division (floored)
+a = 5 // 2  # returns 2
+
+# Power
+a = 5 ** 2  # returns 25
+```
+
+> Proper Division is not supported because UPLC has not way to represent floating point numbers.
+> If you want to perform operations on the real numbers, use the [`fractions` library](https://opshin.opshin.dev/opshin/std/fractions.html)
+
 ## `bool`
 
 The `bool` type has two possible values: `True` or `False`.
@@ -39,6 +63,23 @@ Control flow (if/else, while) are usually controlled using boolean types.
 booly = False
 ```
 
+#### Operation on Booleans
+
+OpShin offers a number of builtin operations for booleans.
+
+```python
+# Conjunction
+b = True and False  # returns False
+
+# Disjunction
+b = True or False  # returns True
+
+# Negation
+b = not True  # returns False
+
+# Cast to integer
+b = int(True)  # returns 1 (False gives 0)
+```
 
 ## `str`
 
@@ -49,6 +90,15 @@ It is mostly used for printing debug messages.
 stringy = "hello world"
 
 not_so_secret_message = "..."
+```
+
+#### Operation on Strings
+
+OpShin offers addition operations for strings.
+
+```python
+# Concatentation
+s = "hello " + "world!"  # Returns "hello world!"
 ```
 
 #### `.encode()`
@@ -109,6 +159,18 @@ You may also use the helper function `bytes.fromhex`.
 
 ```python
 hashy = bytes.fromhex("af2e221a")
+```
+
+#### Operation on ByteStrings
+
+OpShin offers operations for bytestrings.
+
+```python
+# Concatentation
+s = b"hello " + b"world!"  # Returns b"hello world!"
+
+# Index access
+k = b"hello world!"[1]  # Returns the integer of the byte at position i, in this case ord("e") = 101
 ```
 
 #### `.decode()`
