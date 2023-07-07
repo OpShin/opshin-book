@@ -52,7 +52,7 @@ a = 5 ** 2  # returns 25
 ```
 
 > Proper Division is not supported because UPLC has not way to represent floating point numbers.
-> If you want to perform operations on the real numbers, use the [`fractions` library](https://opshin.opshin.dev/opshin/std/fractions.html)
+> If you want to perform operations on rational numbers, use the [`fractions` library](https://opshin.opshin.dev/opshin/std/fractions.html)
 
 ## `bool`
 
