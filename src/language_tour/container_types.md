@@ -85,6 +85,6 @@ The `.items()` method returns a tuple of the each key-value pair in the dictiona
 This is particularly useful if you want to iterate over all pairs contained in a dictionary.
 
 ```python
-for username, score in scores.values():
+for username, score in scores.items():
     print(username + "scored:" + str(score))
 ```
