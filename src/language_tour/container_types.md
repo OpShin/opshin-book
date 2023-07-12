@@ -39,16 +39,25 @@ Opshin supports Python's list comprehension syntax.
 This allows for very compact list initialization:
 
 ```python
-squares = [x**2 for x in range(100)]
+squares = [x**2 for x in listy]
 ```
 
-#### `len()`
+#### `len(x)`
 
 The `len` method returns the length of the list as an `int`:
 
 ```python
 lenny: int = len(listy) 
 lenny == 5  # True
+```
+
+#### Membership using `in`
+
+You can check whether some element is included in a list of elements using the keyword `in`.
+
+```python
+4 in [1, 2, 3, 4, 5]  # True
+100 in range(10)  # False
 ```
 
 ## `Dict[k, v]`
