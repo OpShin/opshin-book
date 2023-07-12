@@ -87,7 +87,7 @@ scores["peter_pan"]  # fails with "KeyError"
 ```
 
 If you are not sure whether a key maps to something in the dictionary
-use `get(x, d)`. It will try to return the value mapped to by `x` in the dictionary.
+use `dict.get(x, d)`. It will try to return the value mapped to by `x` in the dictionary.
 If `x` is not present it will return `d`.
 
 > It is important that `d` is of the value type `v` to guarantee type safety.
