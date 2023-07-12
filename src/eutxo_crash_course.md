@@ -1,4 +1,4 @@
-# EUTxO Crash Course
+# eUTxO Crash Course
 
 >**Note:** This is based on an [awesome guide](https://aiken-lang.org/fundamentals/eutxo) by `@Ktorz`
 
@@ -160,25 +160,17 @@ protocol makes sure of.
 ```
 
 
-<Callout type="info">
-Where do the first outputs come from?
-
-If you've carefully followed the narrative we just went through, you might have
-realized that we have a chicken-and-egg situation. Inputs are references to
-outputs. And outputs are created by spending inputs.
-
-This is what the genesis configuration is for. It defines the starting point of
-the blockchain in the form of an agreed-upon initial list of outputs. Those
-outputs can be referred to using some special identifiers. For example, the
-genesis configuration hash digest and the output's position in the
-configuration.
-
-How the genesis configuration comes to be is also an interesting question but
-out of the scope of the current course. In the case of Cardano, the initial
-distribution resulted from an initial coin offering (abbrev. ICO) where a
-portion of the total Ada supply was sold to stakeholders before the launch of
-the network.
-</Callout>
+> Where do the first outputs come from?
+> 
+> If you've carefully followed the narrative we just went through, you might have
+> realized that we have a chicken-and-egg situation. Inputs are references to
+> outputs. And outputs are created by spending inputs.
+> 
+> This is what the genesis configuration is for. It defines the starting point of
+> the blockchain in the form of an agreed-upon initial list of outputs. Those
+> outputs can be referred to using some special identifiers. For example, the
+> genesis configuration hash digest and the output's position in the
+> configuration.
 
 ### TL;DR
 
@@ -242,13 +234,11 @@ Delegation credentials: c37b1b5dc0669f1d3c61a6fddb2e8fde96be87b881c60bce8e8d542f
 As we can see, this address is a type 3, is for mainnet and uses the same
 credentials for both the payment and the delegation part.
 
-<Callout type="info">
-You will often need to convert back-and-forth between bech32-encoded strings
-and hex-encoded strings. A great command-line tool for working with bech32 can
-be found at
-[input-output-hk/bech32](https://github.com/input-output-hk/bech32#bech32-command-line).
-Use it!
-</Callout>
+> You will often need to convert back-and-forth between bech32-encoded strings
+> and hex-encoded strings. A great command-line tool for working with bech32 can
+> be found at
+> [input-output-hk/bech32](https://github.com/input-output-hk/bech32#bech32-command-line).
+> Use it!
 
 ### Payment credentials
 
@@ -308,10 +298,8 @@ credentials control two separate operations:
 Like payment credentials, delegation credentials comes in two forms: as
 verification key hash digest or as script hash digest.
 
-<Callout type="info">
-More information about addresses and how they work can be found in
-[CIP-0019](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019/#readme)
-</Callout>
+> More information about addresses and how they work can be found in
+> [CIP-0019](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019/#readme)
 
 ### TL;DR
 #
@@ -410,13 +398,11 @@ the transaction's outcome is possible before sending it to the network. Datums
 act as local states, and redeemers are user inputs provided in the transaction
 itself.
 
-<Callout type="info">
-If we take a step back and look at the typical public/private key procedure for
-spending funds, we can see how eUTxO is merely a generalization of that.
-Indeed, the public key (hash) can be seen as _the datum_, whereas the signature
-is the _redeemer_. The script is the digital signature verification algorithm
-that controls whether the signature is valid w.r.t the provided key.
-</Callout>
+> If we take a step back and look at the typical public/private key procedure for
+> spending funds, we can see how eUTxO is merely a generalization of that.
+> Indeed, the public key (hash) can be seen as _the datum_, whereas the signature
+> is the _redeemer_. The script is the digital signature verification algorithm
+> that controls whether the signature is valid w.r.t the provided key.
 
 ### Purposes
 
