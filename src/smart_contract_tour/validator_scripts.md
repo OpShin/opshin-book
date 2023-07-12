@@ -5,9 +5,10 @@ Now we get to put those together to write smart contracts.
 
 If you remember from the [page on the EUTXO model](../eutxo_crash_course.md).
 UTXOs are like bundles of money and a datum stored on the blockchain, they are locked by a validator script which is run when someone attempts to spend that UTXO.
+Of course, this is only the case for spending contracts i.e. Contract addresses that hold actual UTxOs.
+Minting Scripts and other types of validators do not have a datum as parameter.
 
 Smart contract development on Cardano centers around writing validators in a way that allows only transactions that follow the business logic of the application.
-
 Every validator is a simple pure function that takes two to three arguments:
 
 1. **Datum:** This is data stored alongside the UTXO on the blockchain (in the case of Spending Validators i.e. Contract Addresses).
@@ -68,4 +69,5 @@ def validator(datum: CancelDatum, redeemer: None, context: ScriptContext) -> Non
 ```
 
 This might be a bit to take in, especially the logic for checking the signatures.
+The most important part is that you see the parameters and the return type resp. the `assert` statements actually controlling the validation.
 In the next chapter we'll do a deep dive into the single most important object in Cardano smart contracts, the `ScriptContext`.
