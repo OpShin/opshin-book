@@ -108,7 +108,7 @@ players: List[str] = scores.keys() # ["god_binder", "radio_knight"]
 
 #### `.values()`
 
-The `.values()` method
+The `.values()` method returns a list of all the values in a dictionary.
 
 ```python
 raw_scores: List[int] = scores.values() # [12, 42]
@@ -122,5 +122,6 @@ This is particularly useful if you want to iterate over all pairs contained in a
 
 ```python
 for username, score in scores.items():
-    print(username + "scored:" + str(score))
+    print(f"{username} scored: {score}")
+    # prints first "god_binder scored: 12" and then "radio_knight scored: 42"
 ```
