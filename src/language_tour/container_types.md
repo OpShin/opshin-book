@@ -62,12 +62,39 @@ You can check whether some element is included in a list of elements using the k
 
 ## `Dict[k, v]`
 
-The `Dict` type represents a hashmap that maps keys of type `k` to values of type `v`.
+The `Dict` type represents a map from keys of type `k` to values of type `v`.
 It works just like the `dict` type in Python.
 
 ```python
 # A dictionary storing scores in a game.
 scores: Dict[str, int] = {"god_binder": 12, "radio_knight": 42}
+```
+
+### Dictionary Access
+
+A dictionary implements a map. In order to find the mapped value of element `x` we can
+access it in the dictionary via `dict[x]`.
+
+```python
+scores["god_binder"]  # returns 12
+```
+
+Take care when accessing values that are not contained in the dictionary - 
+in case of missing keys, the contract will fail immediately.
+
+```python
+scores["peter_pan"]  # fails with "KeyError"
+```
+
+If you are not sure whether a key maps to something in the dictionary
+use `get(x, d)`. It will try to return the value mapped to by `x` in the dictionary.
+If `x` is not present it will return `d`.
+
+> It is important that `d` is of the value type `v` to guarantee type safety.
+
+```python
+scores.get("god_binder", 0)  # returns 12
+scores.get("peter_pan", 0)  # returns 0
 ```
 
 
