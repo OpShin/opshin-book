@@ -8,16 +8,25 @@ UTXOs are like bundles of money and a datum stored on the blockchain, they are l
 
 Smart contract development on Cardano centers around writing validators in a way that allows only transactions that follow the business logic of the application.
 
-Every validator is a simple pure function that takes three arguments:
+Every validator is a simple pure function that takes two to three arguments:
 
-1. **The Datum:** This is data stored alongside the UTXO on the blockchain.
-2. **The Redeemer:** This data included in the transaction that attempts to spend the UTXO.
-3. **The ScriptContext:** This object stores information about the transaction attempting to spend the UTXO.
+1. **Datum:** This is data stored alongside the UTXO on the blockchain (in the case of Spending Validators i.e. Contract Addresses).
+2. **Redeemer:** This data included in the transaction that attempts to spend the UTXO.
+3. **Script Context:** This object stores information about the transaction attempting to spend the UTXO.
 
-and returns a boolean that determines if the transaction is succesful.
+>**Note:**
+> Datum and Redeemer are entirely controlled by the user and may not be trusted, but the Script Context may be trusted as it is assembled by the node.
+> Consequently, the Datum and the Redeemer can be of any type
+> depending on the contract, but the Script Context is always of type `ScriptContext`.
 
->**Note:** The Datum and the Redeemer can be off any type,
->depending on the contract but the ScriptContext is always of type `ScriptContext` but can be set to type `Nothing` if not in use.
+A validator either does not fail or fails (i.e. through the use of `assert` or an out-of-index array access).
+If it does not fail then, independent of the returned value, the contract execution is counted as a success
+and the contract validates the transaction.
+
+> **Note:** Other Smart Contract languages return a boolean value that determines the success of the transaction.
+> If you return `False` in OpShin, the contract will succeed in any case.
+
+
 
 ## Example Validator - Gift Contract
 
