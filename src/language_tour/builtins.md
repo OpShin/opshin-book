@@ -31,7 +31,7 @@ Returns the character for unicode code point `x`.
 
 Returns the hexadecimal representation of an integer.
 
-#### `len(x: Union[bytes, List[Anything]]) -> str`
+#### `len(x: Union[bytes, List[Anything]]) -> int`
 
 Returns a the length of `x` for bytes and lists.
 
@@ -53,11 +53,11 @@ Returns x<sup>y</sup>
 
 #### `range(x: int) -> List[int]`
 
-Returns the integers from 0 to `x-1`
+Returns the integers from 0 to `x-1` as a list.
 
 #### `reversed(x: List[Anything]) -> List[Anything]`
 
-Returns the reversal of list `x`
+Returns the reversal of list `x`.
 
 #### `str(x: Anything) -> str`
 
