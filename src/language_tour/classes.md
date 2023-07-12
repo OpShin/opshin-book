@@ -87,7 +87,7 @@ if isinstance(a, Person):
     print(a.birthyear)
 ```
 
-We can combine isinstance calls and access shared attributes across classes.
+*New in 0.16.0:* We can combine isinstance calls and access shared attributes across classes.
 
 ```python
 if isinstance(a, Person) or isinstance(a, Animal):
