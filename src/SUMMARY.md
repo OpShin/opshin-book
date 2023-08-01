@@ -14,11 +14,12 @@
   - [Loop Statements](./language_tour/loop_statements.md)
   - [Functions](./language_tour/functions.md)
   - [Builtins](./language_tour/builtins.md)
-  - [🔗 Standard library](https://opshin.opshin.dev/opshin/std/index.html)
+  - [🔗 Standard library](./language_tour/stdlib.md)
+
 
 - [Smart Contract Tour](./smart_contract_tour/index.md)
   - [Validator Scripts](./smart_contract_tour/validator_scripts.md)
   - [The ScriptContext](./smart_contract_tour/the_scriptcontext.md)
   - [Handling Time](./smart_contract_tour/handling_time.md)
-  - [🔗 Ledger definitions](https://opshin.opshin.dev/opshin/ledger/index.html)
-  - [🔗 Examples](https://github.com/OpShin/awesome-opshin/#examples)
+  - [🔗 Ledger definitions](./smart_contract_tour/ledger_def.md)
+  - [🔗 Examples](./smart_contract_tour/examples.md)
