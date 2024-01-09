@@ -60,7 +60,7 @@ They are telling you in advance that an operation will not work as expected.
 Don't fret! Take these error messages as guidance on what works and what not and adjust
 your program as required by the compiler to obtain valid code.
 
-> *Before 0.16.0*: It is not possible to change the type of your variable later.
+> It is not possible to change the type of your variable later.
 > The following program is forbidden
 >
 > ```python
