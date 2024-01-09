@@ -182,7 +182,8 @@ This also works for `bytes`. You can either access a single byte of the string.
 b"test"[1]  # returns 101
 ```
 
-Or you can access a substring of the bytes.
+Or you can access a substring of the bytes from the first (inclusive) to last (exclusive) indicated
+index using `[a:b]` slicing syntax.
 
 ```python
 b"test"[1:3]  # returns b"es"
