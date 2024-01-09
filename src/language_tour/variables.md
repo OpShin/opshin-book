@@ -45,6 +45,9 @@ z: Union[A, B] = y
 
 This will allow you to also store objects of type `B` in `z` later in the code.
 
+> Note that the type of a variable can not be changed after initialization.
+> This is true as of version 0.19.0 and may change again in a later version.
+
 ## Tuple Assignments
 
 Opshin supports Python's tuple assignment syntax:

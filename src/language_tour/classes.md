@@ -13,7 +13,9 @@ class Person(PlutusData):
     birthyear: int
 ```
 
-PlutusData may contain only `bytes`, `int` or other dataclasses.
+> PlutusData may contain only `bytes`, `int`, dicts, lists or other dataclasses.
+
+Note that `str` and `None` are not valid field types of PlutusData.
 
 #### Constructing objects
 
@@ -87,7 +89,7 @@ if isinstance(a, Person):
     print(a.birthyear)
 ```
 
-*New in 0.16.0:* We can combine isinstance calls and access shared attributes across classes.
+We can combine isinstance calls and access shared attributes across classes.
 
 ```python
 if isinstance(a, Person) or isinstance(a, Animal):
@@ -97,10 +99,23 @@ if isinstance(a, Person) or isinstance(a, Animal):
     print(a.name)
 ```
 
+You can also form the complement of type casts.
+
+```python
+a: Union[Person, Animal] = ...
+if isinstance(a, Person):
+    # a is of type Person in this branch
+    print(a.birthyear)
+else:
+    # a is of type Animal in this branch
+    print(a.owner)
+```
+
+
 > Note that you can also use `str` / `print` directly to get a very informative representation of the object
 > ```python
 > print(a)
-> # prints "Person(name=b'Billy', birthyear=1970)"
+> # "Person(name=b'Billy', birthyear=1970)"
 > ```
 
 #### `.to_cbor()`
