@@ -164,7 +164,7 @@ You may also use the helper function `bytes.fromhex`.
 hashy = bytes.fromhex("af2e221a")
 ```
 
-#### Operation on ByteStrings
+#### Operation on bytes (ByteStrings)
 
 OpShin offers operations for bytestrings.
 
@@ -202,6 +202,31 @@ If you want to know the length of a bytestring, call `len()` on it.
 ```python
 len(b"OpShin")  # returns 6
 ```
+
+#### `[]` - indexing and slicing
+
+Python has a general concept of accessing elemtns at a specific index or accessing a slice of them.
+This also works for `bytes`. You can either access a single byte of the string.
+
+```python
+b"test"[1]  # returns 101
+```
+
+Or you can access a substring of the bytes.
+
+```python
+b"test"[1:2]  # returns b"es"
+```
+
+In python, negative indices `y` indicate access at `len(x) - y` for object `x`.
+The following returns the byte at the last position of the byte string!
+
+```python
+b"test"[-1]  # returns 116
+```
+
+This also works with slices.
+
 
 ## `None`
 
