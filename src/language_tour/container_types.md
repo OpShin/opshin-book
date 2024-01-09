@@ -33,6 +33,15 @@ If you want to count from the back, use negative numbers:
 listy[-2]  # returns the second-to-last element, i.e. 3
 ```
 
+### List Slices
+
+You may access slices of a list using the slicing syntax.
+
+```python
+["a", "b", "c", "d"][1:3]  # returns ["b", "c"]
+```
+
+
 ### List Comprehension
 
 Opshin supports Python's list comprehension syntax.
