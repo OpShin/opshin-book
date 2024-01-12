@@ -13,24 +13,33 @@ The Opshin `List` type is a container type that is used to hold multiple values 
 This is works just like the `list` type in Python.
 
 ```python
-listy: List[int] = [1, 1, 2, 3, 5]
+listy: List[int] = [1, 2, 3, 4, 5]
 ```
 
 >**Note:** Opshin lists are actually *linked-lists*.
 > This is because that's how lists are implemented in UPLC.
+
+### List Operations
+
+You can add lists using the `+` operator.
+
+```python
+print([1, 2, 3, 4] + [5, 6])
+# prints "[1, 2, 3, 4, 5, 6]"
+```
 
 ### List Access
 
 You may access elements at arbitrary positions within a list like this:
 
 ```python
-listy[3]  # will return the element at the 4th position (3rd with 0-based indexing), i.e. 3
+listy[3]  # will return the element at the 4th position (3rd with 0-based indexing), i.e. 4
 ```
 
 If you want to count from the back, use negative numbers:
 
 ```python
-listy[-2]  # returns the second-to-last element, i.e. 3
+listy[-2]  # returns the second-to-last element, i.e. 4
 ```
 
 ### List Slices
@@ -68,6 +77,18 @@ You can check whether some element is included in a list of elements using the k
 4 in [1, 2, 3, 4, 5]  # True
 100 in range(10)  # False
 ```
+
+#### Empty lists
+
+Empty lists may only be created in annotated assignments.
+This is to ensure that the type of the empty list can be correctly inferred.
+
+```python
+a = []  # Fails! Unclear what type this expression has!
+
+a: List[int] = [] # This works!
+```
+
 
 ## `Dict[k, v]`
 
