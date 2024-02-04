@@ -51,3 +51,4 @@ python3 -m pip install opshin
 ## Compatibility
 
 All OpShin versions are tightly tied to specific versions of PyCardano. Due to a change of the default value of constructor ids, all OpShin versions < `0.20.0` are only compatible with PyCardano < `0.10.0`.
+All versions >= `0.20.0` are only compatible with PyCardano >= `0.10.0`.
