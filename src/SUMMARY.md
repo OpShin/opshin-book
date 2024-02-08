@@ -2,6 +2,7 @@
 
 [Introduction](./intro.md)
 [Getting Started](./getting_started.md)
+[Additional Resources](./additional_resources.md)
 [Understanding EUTXO](./eutxo_crash_course.md)
 
 - [Language Tour](./language_tour/index.md)
