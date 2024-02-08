@@ -52,31 +52,16 @@ def validator(datum: WithdrawDatum, redeemer: None, context: ScriptContext) -> N
 - Flexible. Imperative, functional, the way you want it.
 - Efficient & Secure. Static type inference ensures strict typing and optimized code.
 
-#### Writing a Smart Contract
+### Supporters
 
-A short non-complete introduction in starting to write smart contracts follows.
+<a href="https://github.com/inversion-dev"><img src="https://avatars.githubusercontent.com/u/127298233?s=200&v=4" width="50"></a>
+<a href="https://github.com/MuesliSwapTeam/"><img  src="https://avatars.githubusercontent.com/u/91151317?v=4" width="50" /></a>
+<a href="https://github.com/AadaFinance/"><img  src="https://avatars.githubusercontent.com/u/89693711?v=4" width="50" /></a>
+<a href="https://github.com/kreate-community/"><img  src="https://avatars.githubusercontent.com/u/118675270?v=4" width="50" /></a>
 
-1. Make sure you understand EUTxOs, Addresses, Validators etc on Cardano. [There is a wonderful crashcourse by @KtorZ](https://aiken-lang.org/fundamentals/eutxo). The contract will work on these concepts
-2. Make sure you understand python. opshin works like python and uses python. There are tons of tutorials for python, choose what suits you best.
-3. Make sure your contract is valid python and the types check out. Write simple contracts first and run them using `opshin eval` to get a feeling for how they work.
-4. Make sure your contract is valid opshin code. Run `opshin compile` and look at the compiler erros for guidance along what works and doesn't work and why.
-5. Dig into the [`examples`](https://github.com/OpShin/opshin/tree/main/examples) to understand common patterns. Check out the [`prelude`](https://opshin.opshin.dev/opshin/prelude.html) for understanding how the Script Context is structured and how complex datums are defined.
-6. Check out the [sample repository](https://github.com/OpShin/opshin-starter-kit) to find a sample setup for developing your own contract.
+The main sponsor of this project is [Inversion](https://inversion.dev/cardano/). Here is a word from them!
 
+> At Inversion, we pride ourselves on our passion for life and our ability to create exceptional software solutions for our clients. Our team of experts, with over a century of cumulative experience, is dedicated to harnessing the power of the Cardano blockchain to bring innovative and scalable decentralized applications to life. We've successfully built applications for NFT management, staking and delegation, chain data monitoring, analytics, and web3 integrations, as well as countless non-blockchain systems. With a focus on security, transparency, and sustainability, our team is excited to contribute to the Cardano ecosystem, pushing the boundaries of decentralized technologies to improve lives worldwide. Trust Inversion to be your go-to partner for robust, effective, and forward-thinking solutions, whether blockchain based, traditional systems, or a mix of the two.
 
-In summary, a smart contract in opshin is defined by the function `validator` in your contract file.
-The function validates that a specific value can be spent, minted, burned, withdrawn etc, depending
-on where it is invoked/used as a credential.
-If the function fails (i.e. raises an error of any kind such as a `KeyError` or `AssertionError`)
-the validation is denied, and the funds can not be spent, minted, burned etc.
-
-> There is a subtle difference here in comparison to most other Smart Contract languages.
-> In opshin a validator may return anything (in particular also `False`) - as long as it does not fail, the execution is considered valid.
-> This is more similar to how contracts in Solidity always pass, unless they run out of gas or hit an error.
-> So make sure to `assert` what you want to ensure to hold for validation!
-
-A simple contract called the "Gift Contract" verifies that only specific wallets can withdraw money.
-They are authenticated by a signature.
-If you don't understand what a pubkeyhash is and how this validates anything, check out [this gentle introduction into Cardanos EUTxO](https://aiken-lang.org/fundamentals/eutxo).
-Also see the [tutorial by `pycardano`](https://pycardano.readthedocs.io/en/latest/guides/plutus.html) for explanations on what each of the parameters to the validator means
-and how to build transactions with the contract.
+They have recently started a podcast, called "Africa On Chain", which you can check out here:
+https://www.youtube.com/@africaonchain
