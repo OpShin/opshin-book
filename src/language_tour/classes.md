@@ -68,7 +68,7 @@ c = Animal(b"jackie", a)
 
 > Importantly, you need to set the `CONSTR_ID` of Classes that occur in a Union to distinct values.
 > On-Chain, classes are only distinguished by their `CONSTR_ID` value.
-> If omitted, the `CONSTR_ID` defaults to 0.
+> If omitted, the `CONSTR_ID` defaults to [an almost-unique determinstic value based on the Class definition](https://github.com/cardano-foundation/CIPs/pull/608).
 
 #### Type casts
 
