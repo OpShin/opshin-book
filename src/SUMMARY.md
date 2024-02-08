@@ -1,9 +1,8 @@
 # Summary
 
-[Introduction](./intro.md)
-[Getting Started](./getting_started.md)
-[Additional Resources](./additional_resources.md)
-[Understanding EUTXO](./eutxo_crash_course.md)
+- [Introduction](./intro.md)
+- [Getting Started](./getting_started.md)
+- [Understanding EUTXO](./eutxo_crash_course.md)
 
 - [Language Tour](./language_tour/index.md)
   - [Structure](./language_tour/structure.md)
@@ -25,3 +24,5 @@
   - [Advanced Topics](./smart_contract_tour/advanced.md)
   - [🔗 Ledger definitions](./smart_contract_tour/ledger_def.md)
   - [🔗 Examples](./smart_contract_tour/examples.md)
+
+- [Additional Resources](./additional_resources.md)
