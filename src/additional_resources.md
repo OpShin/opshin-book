@@ -17,6 +17,11 @@ and compiling some sample contracts yourself.
 You can replace the contracts in your local copy of the repository with code from the
 `examples` section here to start exploring different contracts.
 
+#### Awesome Opshin
+
+The "Awesome Opshin" repository contains a host of DApps, Tutorials and other resources written in OpShin or suitable for learning it.
+It can be found in the [awesome-opshin](https://github.com/OpShin/awesome-opshin) repository.
+
 #### Developer Community and Questions
 
 This repository contains a discussions page.
