@@ -25,4 +25,5 @@
   - [🔗 Ledger definitions](./smart_contract_tour/ledger_def.md)
   - [🔗 Examples](./smart_contract_tour/examples.md)
 
+- [Common Issues](./common_issues.md)
 - [Additional Resources](./additional_resources.md)
