@@ -63,7 +63,7 @@ def validator(datum: GiftDatum, redeemer: None, context: ScriptContext) -> None:
     creator_is_cancelling_gift = datum.creator_pubkeyhash in context.tx_info.signatories
 
     # Confirm the recipient signed the transaction in scenario (2).
-    recipient_is_collecting_gift = datum.pubkeyhash in context.tx_info.signatories
+    recipient_is_collecting_gift = datum.recipient_pubkeyhash in context.tx_info.signatories
 
     assert creator_is_cancelling_gift or recipient_is_collecting_gift, "Required signature missing"
 ```
