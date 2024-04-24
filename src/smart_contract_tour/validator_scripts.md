@@ -55,7 +55,7 @@ class GiftDatum(PlutusData):
     recipient_pubkeyhash: bytes
 
 
-def validator(datum: CancelDatum, redeemer: None, context: ScriptContext) -> None:
+def validator(datum: GiftDatum, redeemer: None, context: ScriptContext) -> None:
     # Check that we are indeed spending a UTxO
     assert isinstance(context.purpose, Spending), "Wrong type of script invocation"
 
