@@ -15,7 +15,21 @@ def fibonacci(n: int) -> int:
         return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-As shown, Opshin functions support recursion. A function `foo` is called as `foo(x, y, ...)` with arguments `x`, `y`, etc.
+A function `foo` is called as `foo(x, y, ...)` with arguments `x`, `y`, etc.
+As shown, Opshin functions support recursion, i.e. the function `fibonacci` is visible inside itself and can be called from within itself.
+
+When there are several arguments, you can use the name of the argument to specify the argument during calling.
+This allows for cleaner code and makes code robust to changes to the function signature.
+
+```python
+def foo(x: int, y:int, z:int) -> int:
+    return (x + y) * z
+
+# you can specify the name of the argument to make clear which number is which argument
+assert foo(x=1, y=2, z=3) == foo(1, 2, 3)
+# you can also change the order and provide keywords only partially
+assert foo(z=3, x=1, y=2) == foo(1, 2, z=3)
+```
 
 If the function does not have a return statement in some path, the implicit return value is `None`.
 This can be useful for code that has side-effects, such as assertion checks.
