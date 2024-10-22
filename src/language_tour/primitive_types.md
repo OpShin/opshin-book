@@ -142,7 +142,7 @@ with the evaluated expression.
 
 ## `bytes`
 
-The `bytes` type in Opshin represents an array/string of bytes.
+The `bytes` type in Opshin represents an array/string of bytes, i.e. it is a list of integers in the range 0-255.
 It's usually called `ByteArray` or `ByteString` in other programming languages.
 You may use it to store raw binary data.
 
