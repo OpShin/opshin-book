@@ -158,10 +158,10 @@ If you have a bytestring `0xaf2e221a` represented in hexadecimal format, you can
 hashy = b"\xaf\x2e\x22\x1a"
 ```
 
-You may also use the helper function `bytes.fromhex`.
+You may also use the helper function `fromhex` usually invoked in Python as `bytes.fromhex`. In OpShin you need to call it on a specific bytes instance, like `b""` (an empty bytestring).
 
 ```python
-hashy = bytes.fromhex("af2e221a")
+hashy = b"".fromhex("af2e221a")
 ```
 
 #### Operation on bytes (ByteStrings)
