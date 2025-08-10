@@ -13,6 +13,11 @@ To run this project, you'll need:
    $ git clone https://github.com/Ch1n3du/opshin_book
      ...
    ```
+2. Install Rust and mdbook
+   ```sh
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   cargo install mdbook
+   ```
 3. Open the book directory in the terminal and run: 
    ```sh
    $ cd opshin_book
@@ -20,15 +25,3 @@ To run this project, you'll need:
      ...
    ```
    This will start a local server hosting the site.
-
-## TODO
-
-- [x] Write Primitive types section.
-- [x] Write Container types section.
-- [x] Write PlutusData types secton
-- [ ] Write on example validators.
-- [ ] Write on Parameterized Scripts.
-- [ ] Show how to make a small Dapp from scratch, cover:
-  - [ ] Project Structure
-  - [ ] Offchain Code
-  - [ ] Testing
