@@ -7,7 +7,7 @@ Opshin has two main container types, lists and dicts:
 
 >**Note:** The container types are generic, and the letter in square brackets (`[]`) are the type arguments
 
-They come in handy if you want to handle many amounts of the same type.
+They come in handy if you want to handle large amounts of values of the same type.
 
 ## `List[a]`
 
