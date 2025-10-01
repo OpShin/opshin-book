@@ -2,6 +2,48 @@
 
 This section contains a few selected, advanced use cases of OpShin.
 
+### Compiler Flags
+
+OpShin provides several flags that enable, control or disable optimizations.
+Concretely the following flags are available (visible when calling `opshin --help`):
+
+| Flag | Description |
+|------|-------------|
+| `-fcompress-patterns` |  Enables the compression of re-occurring code patterns. Can reduce memory and CPU steps but increases the size of the compiled contract. |
+|`-fiterative-unfold-patterns`| Enables iterative unfolding of patterns. Improves application of pattern optimization but is very slow. |
+|`-fconstant-index-access-list` |  Replace index accesses with constant parameters with optimized constant accesses. Reduces memory and CPU steps but increases the size of the compiled contract. |
+|`-fconstant-folding`, `--cf` | Enables experimental constant folding, including propagation and code execution. See below for a detailed explanation. |
+|`-fallow-isinstance-anything` | Enables the use of isinstance(x, D) in the contract where x is of type Anything. This is not recommended as it only checks the constructor id and not the actual type of the data. |
+|`-fremove-dead-code`|    Removes dead code and variables from the contract. |
+|`-ffast-access-skip FAST_ACCESS_SKIP`| How many steps to skip for fast list index access, default None means no steps are skipped (useful if long lists are common). |
+
+### Optimization Levels
+
+OpShin, similar to C-compilers, features optimization levels. These control which optimizations are applied to the generated code to make it smaller and more performant, but at the same time more difficult to debug.
+The levels reach from 0 to 3, where higher numbers indicate more optimizations.
+However, as opposed to C-programs, there are not yet many debugging tools that require non-optimized ode.
+Thus, as a typical user, optimizing less than level 2 will not bring any debugging benefits.
+Therefore, OpShin per default optimizes at level 2.
+Level 3 enables some slow optimizations and in theory allows optimizations that change the semantics, i.e., the behavior, of the contract.
+In practice, this will never have more of an effect than removing print statements or assertion messages.
+However, these messages are quite useful in practice and thus level 3 should not be enabled unless the contract has been thoroughly tested.
+
+The following optimizations are enabled by each optimization level (where each optimization level contains all optimizations of the lower optimizations):
+
+- `O0`: None
+- `O1`: 
+    - `-fcompress-patterns`
+    - `-fconstant-index-access-list`
+    - `-fremove-dead-code`
+- `O2`:
+    - `fconstant-folding`
+    - `ffast-access-skip 5`
+- `O3`:
+    - `fiterative-unfold-patterns`
+
+Flags can be overridden by passing them specifically after specifying an optimization level, e.g., `opshin build ... -O2 -ffast-access-skip 2`.
+
+
 ### Constant Folding
 
 OpShin supports the command-line flag `--constant-folding` or short `--cf`.
