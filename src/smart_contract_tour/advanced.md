@@ -13,7 +13,6 @@ Concretely the following flags are available (visible when calling `opshin --hel
 |`-fiterative-unfold-patterns`| Enables iterative unfolding of patterns. Improves application of pattern optimization but is very slow. |
 |`-fconstant-index-access-list` |  Replace index accesses with constant parameters with optimized constant accesses. Reduces memory and CPU steps but increases the size of the compiled contract. |
 |`-fconstant-folding`, `--cf` | Enables experimental constant folding, including propagation and code execution. See below for a detailed explanation. |
-|`-fallow-isinstance-anything` | Enables the use of isinstance(x, D) in the contract where x is of type Anything. This is not recommended as it only checks the constructor id and not the actual type of the data. |
 |`-fremove-dead-code`|    Removes dead code and variables from the contract. |
 |`-ffast-access-skip FAST_ACCESS_SKIP`| How many steps to skip for fast list index access, default None means no steps are skipped (useful if long lists are common). |
 
@@ -36,10 +35,10 @@ The following optimizations are enabled by each optimization level (where each o
     - `-fconstant-index-access-list`
     - `-fremove-dead-code`
 - `O2`:
-    - `fconstant-folding`
-    - `ffast-access-skip 5`
+    - `-fconstant-folding`
+    - `-ffast-access-skip 5`
 - `O3`:
-    - `fiterative-unfold-patterns`
+    - `-fiterative-unfold-patterns`
 
 Flags can be overridden by passing them specifically after specifying an optimization level, e.g., `opshin build ... -O2 -ffast-access-skip 2`.
 
