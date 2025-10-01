@@ -35,6 +35,12 @@ community](https://discord.gg/umR3A2g4uw) of OpShin
 
 > Help us improve OpShin by [participating in this survey!](https://forms.gle/KdzYYeeiWCwMTHsX9)
 
+#### Smart Contract Sizes
+
+OpShin tries hard to make smart contracts smaller. We track the size of all example contracts in the main OpShin repository and publish a chart of the most recent releases [here](https://opshin.opshin.dev/binary_size_trends.html).
+
+If you have a smart contract that got significantly bigger or more expensive after a recent upgrade, please [open an issue](https://github.com/OpShin/opshin/issues/new?template=bug_report.md) at the OpShin repository!
+
 #### A short guide on Writing a Smart Contract
 
 A short non-complete introduction in starting to write smart contracts follows.
