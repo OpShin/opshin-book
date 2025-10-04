@@ -15,6 +15,8 @@ Concretely the following flags are available (visible when calling `opshin --hel
 |`-fconstant-folding`, `--cf` | Enables experimental constant folding, including propagation and code execution. See below for a detailed explanation. |
 |`-fremove-dead-code`|    Removes dead code and variables from the contract. |
 |`-ffast-access-skip FAST_ACCESS_SKIP`| How many steps to skip for fast list index access, default None means no steps are skipped (useful if long lists are common). |
+| `-fdeduplicate` | Removes duplicated parts of the AST from the lowest level program representation, the UPLC level. This can slightly increase execution cost at a significant reduction of size |
+| `-fremove-traces` | Removes all error messages, print statements and other traces from the program. As OpShin usually prints extensive debug information, this significantly reduces contract size, but makes debugging much harder. |
 
 ### Optimization Levels
 
@@ -39,6 +41,8 @@ The following optimizations are enabled by each optimization level (where each o
     - `-ffast-access-skip 5`
 - `O3`:
     - `-fiterative-unfold-patterns`
+    - `-fdeduplicate`
+    - `-fremove-traces`
 
 Flags can be overridden by passing them specifically after specifying an optimization level, e.g., `opshin build ... -O2 -ffast-access-skip 2`.
 
