@@ -21,7 +21,7 @@ def validator(context: ScriptContext) -> None:
     ...
 ```
 
-For non-spending contracts, you may want to skip the part regarding `datum`. The integrity check is not necessary, but best-practice.
+For non-spending contracts, you may want to skip the part regarding `datum`. 
 
 ### Naming changes in the ledger API
 
