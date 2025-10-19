@@ -21,7 +21,7 @@
   - [Validator Scripts](./smart_contract_tour/validator_scripts.md)
   - [The ScriptContext](./smart_contract_tour/the_scriptcontext.md)
   - [Handling Time](./smart_contract_tour/handling_time.md)
-  - [Migrating to PlutusV3](./smart_contract_tour/migration.md)
+  - [Migrating to PlutusV3](./smart_contract_tour/migration_v3.md)
   - [Advanced Topics](./smart_contract_tour/advanced.md)
   - [🔗 Ledger definitions](./smart_contract_tour/ledger_def.md)
   - [🔗 Examples](./smart_contract_tour/examples.md)
