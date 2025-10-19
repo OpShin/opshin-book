@@ -45,6 +45,7 @@ If you previously paramterized your script, you need to now explicitly specify t
 ```python
 # validator.py
 def validator(tk_name: bytes, context: ScriptContext) -> None:
+    ...
 ```
 
 You need to compile it like this
@@ -59,6 +60,7 @@ If you already parameterize during building, you specify the number of left-over
 ```python
 # validator2.py
 def validator(owner: bytes, after: int, tk_name: bytes, context: ScriptContext) -> None:
+    ...
 ```
 
 ```
@@ -68,3 +70,8 @@ opshin build validator2.py '{"bytes": "DEADBEEF"}' '{"int": 42}' --parameters 1
 ### Multi-purpose contracts
 
 By default, all contracts in PlutusV3 can act as multi-purpose contracts. The flag `--force-three-params` was removed.
+
+### New builtins
+
+The PlutusV3 language comes with a range of new builtins, in particular for bitwise manipulation and operations on the BLS 12 381 rings, enabling the verification of zero-knowledge proofs on-chain.
+You can find more details about all builtins by inspecting the [builtin library](https://opshin.opshin.dev/opshin/std/builtins.html).
