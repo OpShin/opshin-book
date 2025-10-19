@@ -82,11 +82,7 @@ bar + 1  # is not evaluated at compile time
 
 Multi-Purpose contracts are special contracts that can act for different purposes, for example as Spending verification and as Minting verification contract. The benefit is that the contract's hash stays the same for the different purposes, allowing to derive the minting policy and the contract spending address across purposes. An example of such a contract is the ["Wrapped Token" contract](https://github.com/OpShin/opshin/blob/main/examples/smart_contracts/wrapped_token.py), which allows minting a specific token if funds are deposited at its spending address.
 
-In order to allow Multi-Purpose contracts, you need to follow these steps:
-1) Add the flag `--force-three-params` to the build command that you use, e.g. `opshin build any dual_use_contract.py --force-three-params`
-2) Make sure that your contract accepts three parameters: datum, redeemer and script context
-   - The datum has to be of type `Union[..., Nothing]`. When the contract is invoked with minting, certification or withdrawal purpose, the datum input will be an object of type [`Nothing()`](https://github.com/OpShin/opshin/blob/main/opshin/prelude.py#L5) and *not* the datum present at the spending script.
-   - The redeemer has to be a builtin (`int`, `bytes`, etc) or a PlutusDatum with non-0 constructor id.
+By default in PlutusV3, all contracts can act as multi-purpose contracts.
 
 You need to explicitly add your contract for each minting, spending etc invocation in your final transaction. The contract will be called several times during the transaction, with different parameters in Datum, Redeemer and Purpose, depending on your configuration. 
 
