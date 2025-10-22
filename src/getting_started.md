@@ -9,12 +9,10 @@ This guide tries to assume as little knowledge as possible but there are certain
 ## Installation
 
 Install Python `3.9` to `3.13`.
-We recommend using [`uv`](https://docs.astral.sh/uv/getting-started/installation/).
 Then run:
 
 ```sh
-# if you chose uv
-uv pip install opshin
+python3 -m pip install opshin
 ```
 
 ## Compiling Opshin Code
@@ -32,7 +30,7 @@ uv pip install opshin
 2. Run this command:
 
     ```sh
-    uv run opshin build hello_world.py
+    opshin build hello_world.py
     ```
 
     This should create a `build` folder in the current directory.
