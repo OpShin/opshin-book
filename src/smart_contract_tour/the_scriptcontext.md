@@ -48,11 +48,11 @@ class TxInfo(PlutusData):
     reference_inputs: List[TxInInfo]
     # The output UTXOs created by the transaction.
     outputs: List[TxOut]
-    # Transaction fee to be payed for the transaction.
-    fee: Value
+    # Transaction fee to be payed for the transaction in Lovelace.
+    fee: int
     # The value minted in the transaction.
     mint: Value
-    certificates: List[DCert]
+    certificates: List[Certificate]
     # Withdrawals from specific stake keys
     withdrawals: Dict[StakingCredential, int]
     # The range of time in which this transaction is valid
@@ -62,7 +62,7 @@ class TxInfo(PlutusData):
     # All redeemers passed to all script invocations
     redeemers: Dict[ScriptPurpose, Redeemer]
     # All datums present in any inputs
-    data: Dict[DatumHash, Datum]
+    datums: Dict[DatumHash, Datum]
     # The ID of the transaction.
     id: TxId
     # metadata for governance actions
