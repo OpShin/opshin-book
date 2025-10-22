@@ -22,12 +22,15 @@ class ScriptContext(PlutusData):
     Auxiliary information about the transaction and reason for invocation of the called script.
     """
 
-    tx_info: TxInfo
+    transaction: TxInfo
+    redeemer: Anything
     purpose: ScriptPurpose
 
 ```
 
-The most important field in the `ScriptContext` is the `tx_info` field which is of type `TxInfo`.
+The `redeemer` is arbitrary information provided by the user during building the transaction. It can indicate how the user intends to use the contracts, e.g., for cancelling or executing a submitted order.
+
+The second most important field in the `ScriptContext` is the `transaction` field which is of type `TxInfo`.
 
 ## `TxInfo`
 
@@ -49,15 +52,24 @@ class TxInfo(PlutusData):
     fee: Value
     # The value minted in the transaction.
     mint: Value
-    dcert: List[DCert]
-    wdrl: Dict[StakingCredential, int]
-    valid_range: POSIXTimeRange
+    certificates: List[DCert]
+    # Withdrawals from specific stake keys
+    withdrawals: Dict[StakingCredential, int]
+    # The range of time in which this transaction is valid
+    validity_range: POSIXTimeRange
     # The signatures for the transaction.
     signatories: List[PubKeyHash]
+    # All redeemers passed to all script invocations
     redeemers: Dict[ScriptPurpose, Redeemer]
+    # All datums present in any inputs
     data: Dict[DatumHash, Datum]
     # The ID of the transaction.
     id: TxId
+    # metadata for governance actions
+    votes: Dict[Voter, Dict[GovernanceActionId, Vote]]
+    proposal_procedures: List[ProposalProcedure]
+    current_treasury_amount: OptionalLovelace
+    treasury_donation: OptionalLovelace
 ```
 
 ## `TxInInfo`

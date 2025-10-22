@@ -84,7 +84,8 @@ Multi-Purpose contracts are special contracts that can act for different purpose
 
 By default in PlutusV3, all contracts can act as multi-purpose contracts.
 
-You need to explicitly add your contract for each minting, spending etc invocation in your final transaction. The contract will be called several times during the transaction, with different parameters in Datum, Redeemer and Purpose, depending on your configuration. 
+When building a transaction that executes your smart contract,
+you need to explicitly add your contract for each minting, spending etc invocation in your final transaction. The contract will be called several times during the transaction, with different parameters in Datum, Redeemer and Purpose, depending on your configuration. 
 
 ### Checking the integrity of objects
 

@@ -55,7 +55,8 @@ class GiftDatum(PlutusData):
     recipient_pubkeyhash: bytes
 
 
-def validator(datum: GiftDatum, redeemer: None, context: ScriptContext) -> None:
+def validator(context: ScriptContext) -> None:
+    datum: GiftDatum = own_datum_unsafe(context)
     # Check that we are indeed spending a UTxO
     assert isinstance(context.purpose, Spending), "Wrong type of script invocation"
 
@@ -67,6 +68,10 @@ def validator(datum: GiftDatum, redeemer: None, context: ScriptContext) -> None:
 
     assert creator_is_cancelling_gift or recipient_is_collecting_gift, "Required signature missing"
 ```
+
+Two notes:
+- to access the datum that was attached to the spent output, the easiest way is to use `own_datum_unsafe` which is provided to you in the prelude
+- we don't access the redeemer here, because we don't need it. It would be available as `context.redeemer`
 
 This might be a bit to take in, especially the logic for checking the signatures.
 The most important part is that you see the parameters and the return type resp. the `assert` statements actually controlling the validation.

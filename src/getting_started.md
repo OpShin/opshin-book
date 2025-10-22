@@ -8,11 +8,13 @@ This guide tries to assume as little knowledge as possible but there are certain
 
 ## Installation
 
-Install Python `3.8`, `3.9`, `3.10` or `3.11`.
+Install Python `3.9` to `3.13`.
+We recommend using [`uv`](https://docs.astral.sh/uv/getting-started/installation/).
 Then run:
 
 ```sh
-python3 -m pip install opshin
+# if you chose uv
+uv pip install opshin
 ```
 
 ## Compiling Opshin Code
@@ -21,15 +23,16 @@ python3 -m pip install opshin
 
     ```python
     # hello_world.py
+    from opshin.prelude import *
 
-    def validator(_: None) -> None:
+    def validator(_: ScriptContext) -> None:
         print("Hello world!")
     ```
 
 2. Run this command:
 
     ```sh
-    $ opshin build hello_world.py
+    uv run opshin build hello_world.py
     ```
 
     This should create a `build` folder in the current directory.
@@ -47,8 +50,3 @@ python3 -m pip install opshin
 
     We'll cover what all these files in the `hello_world` sub-folder mean later in the book.
 
-
-## Compatibility
-
-All OpShin versions are tightly tied to specific versions of PyCardano. Due to a change of the default value of constructor ids, all OpShin versions < `0.20.0` are only compatible with PyCardano < `0.10.0`.
-All versions >= `0.20.0` are only compatible with PyCardano >= `0.10.0`.
