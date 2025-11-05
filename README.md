@@ -1,5 +1,7 @@
 # Opshin Book
 
+> The documentation is now included with the [main opshin website](https://github.com/opshin/site). This website was replaced with a redirect.
+
 Official documentation for the Opshin programming language.
 
 ## Running locally
