@@ -1,6 +1,4 @@
-# 🔗 Standard Library
+The former opshin book is now hosted with the main OpShin homepage.
+[Click here](https://opshin.dev/user-manual/language_tour) if the automatic redirect does not work.
 
-This page will take you to the definition of the OpShin standard library in the Opshin package.
-[Click here](https://opshin.opshin.dev/opshin/std/index.html) if the automatic redirect does not work.
-
-<meta http-equiv="Refresh" content="0; url='https://opshin.opshin.dev/opshin/std/index.html'" />
+<meta http-equiv="Refresh" content="0; url='https://opshin.dev/user-manual/language_tour'" />

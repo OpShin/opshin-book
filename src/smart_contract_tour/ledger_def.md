@@ -1,6 +1,4 @@
-# 🔗 Ledger definitions
+The former opshin book is now hosted with the main OpShin homepage.
+[Click here](https://opshin.dev/user-manual/smart_contract_tour) if the automatic redirect does not work.
 
-This page will take you to the definition of the Script Context of the Cardano Ledger in the OpShin package.
-[Click here](https://opshin.opshin.dev/opshin/ledger/index.html) if the automatic redirect does not work.
-
-<meta http-equiv="Refresh" content="0; url='https://opshin.opshin.dev/opshin/ledger/index.html'" />
+<meta http-equiv="Refresh" content="0; url='https://opshin.dev/user-manual/smart_contract_tour'" />
